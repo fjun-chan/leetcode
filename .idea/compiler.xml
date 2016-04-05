@@ -4,6 +4,7 @@
     <excludeFromCompile>
       <file url="file://$PROJECT_DIR$/src/algorithms/P104MaximumDepthOfBinaryTree.java" />
       <file url="file://$PROJECT_DIR$/src/algorithms/P226InvertBinaryTree.java" />
+      <file url="file://$PROJECT_DIR$/src/algorithms/P237DeleteNodeInALinkedList.java" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
