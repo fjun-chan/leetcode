@@ -23,15 +23,15 @@ import javax.swing.tree.TreeNode;
  * Created by fjun on 4/4/16.
  */
 public class P226InvertBinaryTree {
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode(int x) { val = x; }
-     * }
-     */
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
     public TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return root;

@@ -22,15 +22,15 @@ import java.util.List;
  */
 
 public class P144BinaryTreePreorderTraversal {
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     * int val;
-     * TreeNode left;
-     * TreeNode right;
-     * TreeNode(int x) { val = x; }
-     * }
-     */
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
     public List<Integer> preorderTraversal(TreeNode root) {
         if (root == null) {
             return new ArrayList<Integer>();

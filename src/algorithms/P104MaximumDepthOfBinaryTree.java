@@ -10,15 +10,16 @@ package algorithms;
  */
 public class P104MaximumDepthOfBinaryTree {
 
-    /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
     public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
