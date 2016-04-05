@@ -15,6 +15,9 @@ public class P238ProductOfArrayExceptSelf {
         System.out.println(Arrays.toString(productExceptSelf(new int[]{1, 2, 3, 4})));
     }
 
+    /**
+     * 思路：将数组分成[0,k-1], [k], [k, n]三部分。先从右往左计算[k,n]的积，再从左往右计算[0, k-1]的积。
+     */
     public static int[] productExceptSelf(int[] nums) {
         int[] res = new int[nums.length];
         int right = 1;
