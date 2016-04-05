@@ -1,7 +1,5 @@
 package algorithms;
 
-import javax.swing.tree.TreeNode;
-
 /**
  *  Invert a binary tree.
 

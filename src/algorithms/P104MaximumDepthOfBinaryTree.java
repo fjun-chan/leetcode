@@ -9,6 +9,9 @@ package algorithms;
  * Created by fjun on 4/4/16.
  */
 public class P104MaximumDepthOfBinaryTree {
+    public static void main(String[] args) {
+        System.out.println(maxDepth(null));
+    }
 
     class TreeNode {
         int val;
@@ -20,7 +23,7 @@ public class P104MaximumDepthOfBinaryTree {
         }
     }
 
-    public int maxDepth(TreeNode root) {
+    public static int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
         }
