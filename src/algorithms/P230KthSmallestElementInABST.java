@@ -19,17 +19,6 @@ import java.util.Stack;
  * Created by fjun on 4/6/16.
  */
 public class P230KthSmallestElementInABST {
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * 将左子树压入栈，并一层层pop。
      */

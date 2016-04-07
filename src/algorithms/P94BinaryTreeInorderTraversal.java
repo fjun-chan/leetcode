@@ -19,17 +19,6 @@ return [1,3,2].
  * Created by fjun on 4/5/16.
  */
 public class P94BinaryTreeInorderTraversal {
-
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public List<Integer> inorderTraversal(TreeNode root) {
         if (root == null) {
             return new ArrayList<Integer>();

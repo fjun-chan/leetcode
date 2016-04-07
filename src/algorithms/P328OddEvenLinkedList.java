@@ -4,15 +4,6 @@ package algorithms;
  * Created by fjun on 4/6/16.
  */
 public class P328OddEvenLinkedList {
-    private static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * 分裂成两个List，最后再合并起来。
      */

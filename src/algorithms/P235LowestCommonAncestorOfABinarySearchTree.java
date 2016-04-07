@@ -19,17 +19,6 @@ package algorithms;
  * Created by fjun on 4/6/16.
  */
 public class P235LowestCommonAncestorOfABinarySearchTree {
-
-    private static final class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         final int min = Math.min(p.val, q.val);
         final int max = Math.max(p.val, q.val);

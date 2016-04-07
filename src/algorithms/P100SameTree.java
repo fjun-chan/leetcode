@@ -8,16 +8,6 @@ package algorithms;
  * Created by fjun on 4/5/16.
  */
 public class P100SameTree {
-
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == q) {
             return true;

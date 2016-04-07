@@ -8,15 +8,6 @@ import javax.management.ListenerNotFoundException;
  * Created by fjun on 4/5/16.
  */
 public class P206ReverseLinkedList {
-
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     * int val;
-     * ListNode next;
-     * ListNode(int x) { val = x; }
-     * }
-     */
     public ListNode reverseList(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
@@ -27,15 +18,6 @@ public class P206ReverseLinkedList {
             cur = next;
         }
         return pre;
-    }
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
     }
 }
 

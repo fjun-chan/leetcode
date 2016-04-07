@@ -13,16 +13,6 @@ public class P104MaximumDepthOfBinaryTree {
         System.out.println(maxDepth(null));
     }
 
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public static int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;

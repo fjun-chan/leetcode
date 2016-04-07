@@ -11,16 +11,6 @@ package algorithms;
  * Created by fjun on 4/4/16.
  */
 public class P237DeleteNodeInALinkedList {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public void deleteNode(ListNode node) {
         ListNode next = node.next;
         if (next == null) {
