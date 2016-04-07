@@ -18,10 +18,13 @@ package algorithms;
 public class P6ZigZagConversion {
     public static void main(String[] args) {
         System.out.println(convert("ABC", 2));
-//        zigZag();
+        zigZag();
     }
 
     public static String convert(String s, int numRows) {
+        if (numRows == 1) {
+            return s;
+        }
         final int len = s.length();
         char[] res = new char[len];
         int cur = 0;
@@ -48,7 +51,7 @@ public class P6ZigZagConversion {
 
     public static void zigZag() {
         int c = 7;
-        int r = 4;
+        int r = 1;
         for (int cr = 0; cr < r; cr ++) {
             for (int n = 0; n < c; n ++) {
                 int i = (r - 1) * 2 * n + cr;
