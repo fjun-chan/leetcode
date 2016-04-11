@@ -49,9 +49,13 @@ public class P15ThreeSum {
                         end--;
                     } while (front < end && nums[end + 1] == nums[end]);
                 } else if (nums[front] + nums[end] < target) {
-                    front++;
+                     do {
+                        front++;
+                    } while (front < end && nums[front - 1] == nums[front]);
                 } else {
-                    end--;
+                    do {
+                        end--;
+                    } while (front < end && nums[end + 1] == nums[end]);
                 }
             }
             while(i < nums.length-2 && nums[i+1] == nums[i]) i++;
