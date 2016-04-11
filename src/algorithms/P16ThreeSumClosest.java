@@ -23,7 +23,6 @@ public class P16ThreeSumClosest {
         Arrays.sort(nums);
         int diff = Integer.MAX_VALUE;
         int closest = 0;
-        int flag = 0;
         for (int i = 0; i < nums.length - 2; i ++) {
             int front = i + 1;
             int end = nums.length - 1;
@@ -39,12 +38,10 @@ public class P16ThreeSumClosest {
                     closest = sum;
                 }
                 if (sum < target) {
-                    flag = -1;
                     do {
                         front ++;
                     } while (front < end && nums[front - 1] == nums[front]);
                 } else {
-                    flag = 1;
                     do {
                         end --;
                     } while (front < end && nums[end + 1] == nums[end]);
