@@ -38,6 +38,9 @@ public class P18FourSum {
         final int imax = nums.length - 3;
         final int jmax = nums.length - 2;
         for (int i = 0; i < imax; i ++) {
+            if (nums[i] << 2 > target) {
+                break;
+            }
             for (int j = i + 1; j < jmax; j ++) {
                 int k = j + 1, l = nums.length - 1;
                 while (k < l) {
