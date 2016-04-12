@@ -5,6 +5,13 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
+ * Given a digit string, return all possible letter combinations that the number could represent.
+ *
+ * A mapping of digit to letters (just like on the telephone buttons) is given below.
+ *
+ * Input:Digit string "23"
+ * Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+ *
  * Created by fjun on 4/12/16.
  */
 public class P17LetterCombinationsOfAPhoneNumber {
