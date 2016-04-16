@@ -6,33 +6,32 @@ import java.util.*;
  * Created by fjun on 4/13/16.
  */
 public class P23MergeKSortedLists {
+
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) return null;
-        LinkedList<Pair> pairs = new LinkedList<Pair>();
+        LinkedList<Pair> heap = new LinkedList<Pair>();
         for (int i = 0; i < lists.length; i ++) {
             ListNode node = lists[i];
             if (node == null) continue;
-            pairs.add(new Pair(node.val, i));
+            heap.add(new Pair(node.val, i));
         }
-        if (pairs.size() == 1) {
-            return lists[pairs.get(0).index];
+        if (heap.size() == 1) {
+            return lists[heap.get(0).index];
         }
-        Collections.sort(pairs, Pair.COMP);
+        Collections.sort(heap, Pair.COMP);
         final ListNode head = new ListNode(0);
         ListNode cur = head;
-        Iterator<Pair> iter = pairs.iterator();
-        while (iter.hasNext()) {
-            Pair pair = iter.next();
-            ListNode node = lists[pair.index];
+        while(!heap.isEmpty()) {
+            final Pair pair = heap.removeFirst();
+            final ListNode node = lists[pair.index];
             cur.next = node;
             cur = cur.next;
-            if (node.next == null) {
-                iter.remove();
-            } else {
+            if (node.next != null) {
                 pair.min = node.next.val;
+                lists[pair.index] = node.next;
+                heap.add(pair);
+                Collections.sort(heap, Pair.COMP);
             }
-            lists[pair.index] = node.next;
-            Collections.sort(pairs, Pair.COMP);
         }
         return head.next;
     }
