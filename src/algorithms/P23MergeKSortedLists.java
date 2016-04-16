@@ -3,6 +3,8 @@ package algorithms;
 import java.util.*;
 
 /**
+ * Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+ *
  * Created by fjun on 4/13/16.
  */
 public class P23MergeKSortedLists {
@@ -29,11 +31,22 @@ public class P23MergeKSortedLists {
             if (node.next != null) {
                 pair.min = node.next.val;
                 lists[pair.index] = node.next;
-                heap.add(pair);
-                Collections.sort(heap, Pair.COMP);
+                insertSortedHeap(heap, pair);
             }
         }
         return head.next;
+    }
+
+    private static void insertSortedHeap(LinkedList<Pair> heap, Pair pair) {
+        int index = 0;
+        final int len = heap.size();
+        while (index < len) {
+            if (heap.get(index).min > pair.min) {
+                break;
+            }
+            index ++;
+        }
+        heap.add(index, pair);
     }
 
     private static final class Pair {
