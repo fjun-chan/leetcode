@@ -37,6 +37,8 @@ public class P25ReverseNodesInKGroup {
                     pre = cur;
                     cur = next;
                 }
+
+                // Take care of the states of THESE POINTERS..!!!!
                 last.next = search;
                 last = pointer;
                 pointer.next = nextSearch;
