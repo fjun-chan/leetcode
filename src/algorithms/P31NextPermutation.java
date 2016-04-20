@@ -18,10 +18,11 @@ import java.util.Arrays;
  */
 public class P31NextPermutation {
     public static void main(String[] args) {
-        int[] nums = {1,5,4,2};
+        int[] nums = {1,1};
         nextPermutation(nums);
         System.out.println(Arrays.toString(nums));
     }
+
 
     /**
      * 1,5,4,2 -> 2,5,4,1 -> 2,1,4,5
@@ -30,34 +31,28 @@ public class P31NextPermutation {
      * 2,1,5,4 -> 2,4,1,5
      */
     public static void nextPermutation(int[] nums) {
-        int pos = -1;
-        for (int n = nums.length - 1; n > 0; n --) {
-            if (nums[n] > nums[n-1]) {
-                pos = n - 1;
-                break;
-            }
+        int pos = nums.length - 1;
+        while(pos > 0 && nums[pos] <= nums[pos - 1]) { pos --;}
+        if (pos == 0) {
+            reverse(nums, 0, nums.length - 1);
+            return;
         }
-        if (pos != -1) {
-            int t = pos + 1;
-            for (int n = nums.length - 1; n >= 0; n --) {
-                if (nums[n] > nums[pos]) {
-                    t = n;
-                    break;
-                }
-            }
-            nums[t] = nums[t] ^ nums[pos];
-            nums[pos] = nums[t] ^ nums[pos];
-            nums[t] = nums[t] ^ nums[pos];
-        }
+        int t = nums.length - 1;
+        while(t > 0 && nums[t] <= nums[pos - 1]) { t --; }
+        swap(nums, t, pos - 1);
+        reverse(nums, pos, nums.length - 1);
+    }
 
-        int s = pos + 1;
-        int e = nums.length - 1;
-        while (s < e) {
-            nums[s] = nums[s] ^ nums[e];
-            nums[e] = nums[s] ^ nums[e];
-            nums[s] = nums[s] ^ nums[e];
-            s ++;
-            e --;
+    private static void reverse(int[] a, int f, int t) {
+        while (f < t) {
+            swap(a, f, t);
+            f ++;
+            t --;
         }
+    }
+    private static void swap(int[] a, int i, int j) {
+        a[i] = a[i] ^ a[j];
+        a[j] = a[i] ^ a[j];
+        a[i] = a[i] ^ a[j];
     }
 }
