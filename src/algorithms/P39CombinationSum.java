@@ -37,7 +37,6 @@ public class P39CombinationSum {
         for (int i = start; i < array.length; i ++) {
             int num = array[i];
             int n = target / num;
-            if (n == 0) return;
             for (int j = n; j >= 1; j --) {
                 List<Integer> list = addNTimes(had, num, j);
                 int left = target - num * j;
@@ -57,7 +56,4 @@ public class P39CombinationSum {
         }
         return list;
     }
-
-
-
 }
