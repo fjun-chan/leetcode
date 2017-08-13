@@ -1,7 +1,5 @@
 package algorithms;
 
-import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
-
 import java.lang.reflect.Array;
 import java.nio.channels.ConnectionPendingException;
 import java.nio.channels.MulticastChannel;

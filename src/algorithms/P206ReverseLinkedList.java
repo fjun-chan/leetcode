@@ -1,7 +1,5 @@
 package algorithms;
 
-import javax.management.ListenerNotFoundException;
-
 /**
  * Reverse a singly linked list.
  *
